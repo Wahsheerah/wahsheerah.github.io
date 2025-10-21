@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio | Wahsheerah</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>Wahsheerah</h1>
+    <!-- Hamburger Menu -->
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+
+    <!-- Navigation -->
+    <nav id="ul">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Section -->
+  <main>
+      <h2>Contact Us</h2>
+      <p>Get in Touch:</p>
+      <p>I’d love to hear from you! Whether you’re looking to collaborate, invest or simply connect — reach out and let’s create something impactful together.</p>
+     <dt>Contact Details:<dd> <dt>📧 Email:<dd>kelvinwachira454@gmail.com</dd></dt>
+      <dt>🌍 Location:<dd>Nairobi, Kenya.</dd></dt>
+      <dt>📱 Phone/WhatsApp:<dd>+254 703 163 909.</dd></dt></dd></dt>
+      <p>Let's turn vision into reality.</p>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Wahsheerah. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Menu Toggle -->
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.querySelector("nav ul");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
+
+  </script>
+</body>
+</html>

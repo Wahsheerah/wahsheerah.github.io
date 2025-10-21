@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio | Wahsheerah</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>Wahsheerah</h1>
+    <!-- Hamburger Menu -->
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+
+    <!-- Navigation -->
+    <nav id="ul">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Section -->
+  <main>
+      <h2>Welcome to Wahsheerah's World</h2>
+      <p>Power in Vision, Strength in Action.</p>
+      <p>Welcome to my world — where purpose meets innovation.
+I’m WahsheeRah, Kelvin Wachira, a visionary entrepreneur, leader and believer in faith-driven success. I’m passionate about building brands, empowering people and shaping Africa’s future through creativity, technology and purpose.</p>
+      <p>Every dream begins with a vision and every vision demands action.
+Here, you’ll discover my journey, ventures and the values that drive me — integrity, innovation and excellence. Through my brands — Zanite Enterprise, Savannah Scenture, Roadmaq Motors and Horizon Properties, all under SheeRah Corp umbrella — I aim to create opportunities that inspire and empower generations. </p>
+
+      <div class="button-container">
+        <a href="about.html" class="luxury-btn">Discover More</a>
+      </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Wahsheerah. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Menu Toggle -->
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.querySelector("nav ul");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
+  </script>
+</body>
+</html>

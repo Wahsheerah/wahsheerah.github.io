@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio | Wahsheerah</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>Wahsheerah</h1>
+    <!-- Hamburger Menu -->
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+
+    <!-- Navigation -->
+    <nav id="ul">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Section -->
+  <main>
+    <h2>About Me</h2>
+      <p>Kelvin Wachira is a purpose-driven entrepreneur, visionary thinker and creative strategist passionate about impact-driven innovation. My journey began with a simple belief — that faith, consistency and courage can turn any vision into a legacy.</p>
+      <p>Over the years, I’ve founded multiple ventures across diverse industries — technology, lifestyle, real estate and automotive — all united under one purpose: empowering people to dream bigger, think differently and build boldly.</p>
+      <p>Beyond business, I’m deeply committed to mentorship, leadership and personal and spirictual growth. I believe success is not just about wealth — it’s about influence, legacy and transformation.</p>
+      <dt>Quote:<dd>“True greatness begins when vision meets purpose and action follows faith.” — WahsheeRah</dd></dt> 
+      <dt>Mission:<dd>To empower generations through vision, action and innovation. </dd></dt>
+      <dt>Vision:<dd>To build sustainable ventures that transform communities and industries.</dd></dt>
+      <dl>
+  <dt>Core Values:</dt>
+  <dd>
+    <ul>
+      <li>Integrity</li>
+      <li>Innovation</li>
+      <li>Excellence</li>
+      <li>Empowerment</li>
+    </ul>
+  </dd>
+</dl>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Wahsheerah. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Menu Toggle -->
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.querySelector("nav ul");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
+
+  </script>
+</body>
+</html>

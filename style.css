@@ -1,0 +1,295 @@
+/* ============================================================
+   GLOBAL RESET & BASE STYLES
+   ============================================================ */
+
+/* Remove default margins, padding, and make box-sizing consistent */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  background-color: #1b1b1b; /* Dark background for dark theme */
+  color: #f5f5f5; /* Light text color */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures footer stays at bottom */
+  transition: background 0.4s, color 0.4s; /* Smooth theme transitions */
+}
+
+/* ============================================================
+   HEADER SECTION
+   ============================================================ */
+
+header {
+  background: #111;
+  color: #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  position: sticky; /* Stays at top while scrolling */
+  top: 0;
+  z-index: 1000; /* Keeps header above other elements */
+}
+
+/* Logo / Site name */
+header h1 {
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+/* ============================================================
+   NAVIGATION MENU
+   ============================================================ */
+
+/* Navigation links (horizontal on large screens) */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+/* Each link styling */
+nav ul li a {
+  display: inline-block;
+  background: rgb(177, 175, 166);
+  color: #111;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: background 0.3s; /* Smooth hover transition */
+}
+
+/* Hover state */
+nav ul li a:hover {
+  background: #584915;
+}
+
+/* Active page link */
+nav ul li a.active {
+  color: rgb(14, 40, 126);
+}
+
+/* Hamburger icon (hidden on large screens) */
+.menu-toggle {
+  display: none;
+  font-size: 1.8em;
+  cursor: pointer;
+  color: #fff;
+  justify-content: right;
+}
+
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
+
+.hero {
+  flex: 1; /* Pushes footer to bottom */
+  padding: 60px 40px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Section heading */
+h2 {
+  font-size: 2em;
+  color: #f0d78c;
+  margin-bottom: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Paragraph styling */
+p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #e6e6e6;
+  margin: 20px;
+  padding: 7px;
+  text-align: center;
+}
+
+/* Description list terms */
+dt {
+  font-size: 20px;
+  color: gainsboro;
+  font-weight: 600; 
+  margin: 10px;
+  padding: 7px;
+  text-align: center;
+}
+
+/* Description list definitions (lighter than dt) */
+dd {
+  font-size: medium;
+  color: gainsboro;
+  font-weight: bolder;
+  margin: 15px;
+  padding: 7.5px;
+  align-items: center;
+  justify-content: centers;
+  text-align: center;
+}
+
+dd ul {
+  list-style-position: inside; /* keeps bullets closer to text */
+  margin-left: 0; /* remove large browser default indentation */
+  padding-left: 0; /* tighten spacing */
+  text-align: left; /* keeps items readable */
+}
+
+dd ul li {
+  margin: 4px 0; /* slight space between list items */
+}
+
+dl {
+  text-align: center;
+}
+dd ul {
+  display: inline-block;
+  text-align: left; /* keeps bullets aligned while the whole block is centered */
+}
+
+
+
+/* ============================================================
+   BUTTON STYLING
+   ============================================================ */
+
+/* Button container for centering */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+/* Elegant button design */
+.luxury-btn {
+  color: azure;
+  text-decoration: none;
+  border: 1px solid azure;
+  padding: 12px 30px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 1rem;
+  background: none;
+}
+
+/* Hover effect for button */
+.luxury-btn:hover {
+  background-color: beige;
+  color: darkblue;
+  border-color: beige;
+}
+
+/* ============================================================
+   FOOTER SECTION
+   ============================================================ */
+
+footer {
+  background: #111;
+  text-align: center;
+  padding: 15px 0;
+  color: #d1d1d1;
+  margin-top: auto; /* Sticks to the bottom */
+}
+
+/* ============================================================
+   RESPONSIVE DESIGN (FOR SCREENS BELOW 768px)
+   ============================================================ */
+
+@media (max-width: 768px) {
+  /* Hide nav links and switch to vertical layout */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #222;
+    border: 1px solid #444;
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  /* Show the nav when .show class is toggled via JS */
+  nav ul.show {
+    display: flex;
+  }
+
+  /* Display hamburger icon */
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* ============================================================
+   LIGHT THEME STYLING
+   (Triggered automatically when user's system prefers light mode)
+   ============================================================ */
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #fefefe;
+    color: #1a1a1a;
+  }
+
+  header {
+    background: #fafafa;
+    color: #111;
+    border-bottom: 1px solid #ffffff;
+  }
+
+  nav ul li a {
+    color: #222;
+  }
+
+  nav ul li a:hover,
+  nav ul li a.active {
+    border: 1px solid #f2c200;
+    color: #b08900;
+  }
+
+  h2 {
+    color: #4e3e05;
+  }
+
+  p {
+    color: #000000;
+  }
+
+  .luxury-btn {
+    background: #f2c200;
+    color: #111;
+  }
+
+  .luxury-btn:hover {
+    background: #c9a100;
+  }
+
+  footer {
+    background: #fafafa;
+    color: #444;
+    border-top: 1px solid #ddd;
+  }
+
+  /* Light theme hamburger icon and menu */
+  .menu-toggle {
+    color: #111;
+  }
+
+  nav ul {
+    background: #fff;
+    border: 1px solid #ccc;
+  }
+}
