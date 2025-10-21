@@ -140,14 +140,17 @@ dd {
 }
 
 dd ul {
-  list-style-position: inside; /* keeps bullets closer to text */
-  margin-left: 0; /* remove large browser default indentation */
-  padding-left: 0; /* tighten spacing */
-  text-align: left; /* keeps items readable */
+  list-style-position: inside;
+  margin: 0 auto;
+  padding: 0;
+  display: inline-block;
+  text-align: left;
 }
 
 dd ul li {
-  margin: 4px 0; /* slight space between list items */
+  color: inherit; /* make list items follow text color */
+  font-size: inherit; /* match same size as dd */
+  margin: 4px 0;
 }
 
 dl {
@@ -293,3 +296,21 @@ footer {
     border: 1px solid #ccc;
   }
 }
+
+/* ============================================================
+   TEXT CONSISTENCY FIX
+   ============================================================ */
+
+body, p, dt, dd, li {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f5f5f5; /* unified light text for dark mode */
+  font-size: 18px;
+}
+
+/* For light mode */
+@media (prefers-color-scheme: light) {
+  body, p, dt, dd, li {
+    color: #1a1a1a; /* unified text color */
+  }
+}
+
