@@ -83,7 +83,7 @@ nav ul li a.active {
   font-size: 1.8em;
   cursor: pointer;
   color: #fff;
-  justify-content: right;
+  justify-content: left;
 }
 
 /* ============================================================
@@ -211,31 +211,33 @@ footer {
    RESPONSIVE DESIGN (FOR SCREENS BELOW 768px)
    ============================================================ */
 
+/* For small screens */
 @media (max-width: 768px) {
-  /* Hide nav links and switch to vertical layout */
+  header {
+    justify-content: flex-start; /* items start from left */
+    gap: 15px; /* small space between icon and title */
+  }
+
   nav ul {
     display: none;
     flex-direction: column;
     position: absolute;
     top: 60px;
-    right: 20px;
+    left: 20px; /* menu drops from left */
     background: #222;
     border: 1px solid #444;
     padding: 15px;
     border-radius: 10px;
   }
 
-  /* Show the nav when .show class is toggled via JS */
   nav ul.show {
     display: flex;
   }
 
-  /* Display hamburger icon */
   .menu-toggle {
     display: block;
   }
 }
-
 /* ============================================================
    LIGHT THEME STYLING
    (Triggered automatically when user's system prefers light mode)
