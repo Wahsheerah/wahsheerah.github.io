@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio | Wahsheerah</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <!-- Hamburger Menu -->
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+
+    <!-- Navigation -->
+    <nav id="ul">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="Services.html" class="active">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Section -->
+  <main>
+      <h2>Services</h2>
+      <p>What I Do: </p>
+      <p>Through my ventures and personal initiatives, I provide innovative solutions that empower individuals, startups and organizations to grow, scale and thrive.
+        I work across industries — from technology to lifestyle, real estate and automotive — providing strategic direction, business growth and brand innovation.</p>
+      <dt>Business Consultation & Mentorship<dd>Helping individuals and startups develop clear strategies for growth and impact.</dd></dt>
+      <dt>Brand & Digital Presence Development<dd>Creating bold brand identities, websites and digital solutions that stand out.</dd></dt>
+      <dt>Investment & Partnership Initiatives<dd>Collaborating with forward-thinking investors and partners to build transformative ventures.</dd></dt>
+      <dt>Motivational Speaking & Leadership Development<dd>Inspiring others to pursue their purpose with courage, faith and action.</dd></dt>
+      <p>Let’s build something that lasts.</p>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Wahsheerah. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Menu Toggle -->
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.querySelector("nav ul");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
+
+  </script>
+</body>
+</html>
